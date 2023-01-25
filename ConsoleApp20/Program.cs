@@ -1,4 +1,7 @@
-﻿Console.WriteLine("я программа");
+﻿using ConsoleApp20;
+
+Console.WriteLine("я программа");
+UserService service = new UserService(); // выделил память
 
 while (true)
 {
@@ -29,5 +32,18 @@ void AutUser()
 
 void AddUser()
 {
-    throw new NotImplementedException();
+    Console.WriteLine("Введите имя");
+    string name = Console.ReadLine();
+    Console.WriteLine("Введите логин");
+    string login = Console.ReadLine();
+    Console.WriteLine("Введите пароль");
+    string password = Console.ReadLine();
+
+    User user = new User();
+    user.Name = name;
+    user.Password = password;
+    user.Login = login;
+
+    service.Users.Add(user);
+    Console.WriteLine("пользователь  добавлен");
 }
