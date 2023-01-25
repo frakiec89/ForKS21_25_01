@@ -12,4 +12,9 @@ namespace ConsoleApp20
         public string Password { get; set; }
         public string Login { get; set; }
     }
+
+    public class UserService
+    {
+        public List<User> Users { get; set; } = new List<User>();
+    }
 }
