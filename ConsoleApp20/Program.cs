@@ -27,7 +27,21 @@ while (true)
 
 void AutUser()
 {
-    throw new NotImplementedException();
+    Console.WriteLine("Введите логин");
+    string login = Console.ReadLine();
+    Console.WriteLine("Введите пароль");
+    string password = Console.ReadLine();
+
+    foreach (User us in service.Users)
+    {
+        if(us.Login == login && us.Password == password)
+        {
+            Console.WriteLine("привет " + us.Name);
+            return;
+        }
+    }
+    Console.WriteLine("пользователь не  найден");
+
 }
 
 void AddUser()
