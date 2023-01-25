@@ -1,5 +1,4 @@
-﻿
-Console.WriteLine("я программа");
+﻿Console.WriteLine("я программа");
 
 while (true)
 {
@@ -17,7 +16,8 @@ while (true)
         case "in": AutUser(); break;
         case "clear": Console.Clear(); break;
         case "exit": return; ;
-        default: Console.WriteLine("команда не  ясна - попробуйте  еще раз");
+        default:
+            Console.WriteLine("команда не  ясна - попробуйте  еще раз");
             break;
     }
 }
